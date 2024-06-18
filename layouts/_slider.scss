@@ -1,0 +1,25 @@
+.gallery {
+    @include section();
+
+    .swiper-slide {
+        img {
+            width: 29rem;
+            height: 44rem;
+            border: 4px solid $bgColor;
+        }
+    } 
+
+    .swiper-wrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .swiper-pagination {
+        margin-bottom: 2rem;
+    }
+
+    .swiper-scrollbar {
+        margin-bottom: 0.5rem;
+        background-color: $bgColor;
+    }
+}

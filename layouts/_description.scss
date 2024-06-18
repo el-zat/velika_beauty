@@ -1,0 +1,72 @@
+.description {
+    @include section();
+
+    &__wrapper {
+        @include flex (none, none, column);
+
+        @media ($_tablet) {
+            @include flex (none, none, row);
+            // height: 70rem;
+        }
+
+        @media ($_desktop) {
+            @include flex (space-around, center, row);
+            // height: 70rem;
+        }
+    }
+
+    &__photo {
+        margin-top: 2rem;
+        
+        text-align: center;
+
+        img {
+            width: 10rem;       
+            box-shadow:  12px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-left: auto;
+            margin-right: auto;
+            
+            @media ($_tablet) {
+                width: 16rem;
+                height: 28rem;
+            }
+        
+            @media ($_desktop) {
+                width: 20rem;
+                height: 35rem;
+                margin-left: 2rem;
+                margin-right: 3rem;
+            }
+        }
+    }
+
+    &__image {
+        margin-left: auto;
+        margin-right: auto;
+
+        img {
+            border: 4px solid $bgColor;
+            width: 15rem; 
+            margin-bottom: 1rem;           
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            @media ($_tablet) {
+                width: 15rem;
+                margin-bottom: 0; 
+            }
+        
+            @media ($_desktop) {
+                width: 40rem;
+                height: 70rem;
+            }
+        }
+    }
+
+    &__text {
+        @include p1();
+        font-family:cursive;
+        padding: 4rem 2rem 2rem;
+        color: $mainFontColor;
+        float: right;
+    }
+}
