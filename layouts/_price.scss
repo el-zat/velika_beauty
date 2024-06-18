@@ -1,0 +1,55 @@
+.price {
+    @include section();
+
+    &__wrapper {
+        @include flex(none, none, row);
+        padding: 4rem;
+    }
+
+    &__title {
+        @include p1();
+        font-family:cursive;       
+        color: $mainFontColor;
+        font-weight: bold;
+    }
+
+    &__content {
+        @include flex(none, center, column);
+        width: 30%;
+        background-color: $beige;
+        padding: 4rem;
+        @include p1();
+        font-family:cursive;       
+        color: $mainFontColor;
+    }
+
+
+    &__card {
+        width: 35%;
+        margin-left: 4rem;
+        margin-bottom: 2rem;
+        @include flex(none, none, column);
+        background-color: $beige;
+        padding: 4rem;
+
+        &-title {
+            text-align: center;
+            @include p1();
+            font-family:cursive;       
+            color: $mainFontColor;
+            font-weight: bold;
+        }
+
+        &-content {
+            @include flex(none, none, column);
+            @include p1();
+            font-family:cursive;       
+            color: $mainFontColor;
+
+            & li {
+                margin-bottom: 2rem;;
+            }
+        }
+
+    }
+}

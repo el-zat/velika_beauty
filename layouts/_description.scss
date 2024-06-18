@@ -6,19 +6,15 @@
 
         @media ($_tablet) {
             @include flex (none, none, row);
-            // height: 70rem;
         }
 
         @media ($_desktop) {
             @include flex (space-around, center, row);
-            // height: 70rem;
         }
     }
 
     &__photo {
-        margin-top: 2rem;
-        
-        text-align: center;
+        margin-top: 2rem;        
 
         img {
             width: 10rem;       
@@ -64,9 +60,10 @@
 
     &__text {
         @include p1();
-        font-family:cursive;
-        padding: 4rem 2rem 2rem;
+        font-family:cursive;       
         color: $mainFontColor;
+        padding: 4rem 2rem 2rem;
         float: right;
+        margin-top: 2rem;
     }
 }

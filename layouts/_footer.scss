@@ -1,0 +1,128 @@
+.footer {
+    @include section();
+    @include flex(none, none, column);
+    
+
+    &__wrapper {
+        @include flex(space-between, none, column);
+
+        @media ($_tablet) {
+            @include flex(space-between, none, row);
+        }
+        padding: 3rem 5% 1rem;
+    }
+
+    &__content {
+        @include flex(none, none, column);
+        padding-top: 0;
+        @include p2();
+    }
+
+    &__title {
+        @include h1();
+        text-align: start;
+        margin-bottom: 1rem;
+        
+    }
+
+    &__location {
+        margin-bottom: 2rem;
+
+        &-text {
+            @include flex(none, center, row);
+            @include p2();
+            margin-bottom: 2rem;
+        }
+
+        img {
+            width: 2rem;
+            height: 2rem;
+
+            @media ($_tablet) {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+
+    &__contacts{
+        @include flex(none, none, column);
+        margin-top: 5%;
+        margin-left: 10%;
+        @media ($_tablet)  {
+            margin-left: 4rem;
+        }
+        @include p2();
+
+        &-item {
+            margin-bottom: 2rem
+        }
+    }
+
+    &__legality {
+        @include flex(none, none, column);
+        @include p2();
+        margin-top: 2rem;
+
+        @media ($_tablet)  {
+            margin-top: 10rem;
+        }
+        @media ($_desktop)  {
+            margin-top: 10rem;
+        }
+         &-menu-item {
+            margin-bottom: 3rem;
+         }
+    }
+
+
+    &__contacts-item {
+        text-decoration: none;
+        margin-bottom: 3rem;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+
+            @media ($_tablet) {
+                width: 3rem;
+                height: 3rem;
+            }
+            margin-right: 1rem;
+            display: block;
+            color: $black;
+        }
+    }
+    
+    &__links {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.2rem;
+        margin-top: 3rem;
+        @include p2();
+
+        @media ($_desktop) {
+            margin-top: 0;
+        }
+    }
+
+    &__copyright {
+        background-color: $beige;
+        padding: 2rem 0 2rem;
+        @include p2();
+
+        &-text {
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+            text-align: center;
+            line-height: 2;
+
+            @media ($_desktop) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+}

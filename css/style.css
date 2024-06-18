@@ -14,6 +14,41 @@ body {
   text-decoration: none;
 }
 
+.submit__select, .submit__input {
+  color: rgb(90, 78, 78);
+  font-size: 2rem;
+  background-color: rgb(207, 183, 183);
+  padding: 1.4rem 1rem;
+  line-height: 1;
+  border: 2px solid rgb(90, 78, 78);
+  height: 7rem;
+  margin-bottom: 5rem;
+  font-family: cursive;
+}
+
+.submit__button {
+  display: inline-block;
+  background-color: rgb(236, 218, 218);
+  color: rgb(90, 78, 78);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1;
+  padding: 1.4rem 4.8rem;
+  cursor: pointer;
+  border: 2px solid rgb(90, 78, 78);
+  text-align: center;
+  user-select: none;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+.submit__button:hover {
+  background-color: rgb(207, 183, 183);
+}
+.submit__button:focus {
+  outline: none;
+}
+
 @font-face {
   font-family: brush;
   src: url("brush.ttf") format("truetype");
@@ -21,11 +56,11 @@ body {
   font-style: normal;
 }
 .header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  top: 0;
+  top: 7rem;
 }
 @media (min-width: 1024px) {
   .header {
@@ -74,6 +109,7 @@ body {
   font-size: 1.8rem;
   margin-top: 0.5rem;
   color: rgb(90, 78, 78);
+  font-weight: bold;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 @media (min-width: 1024px) {
@@ -106,6 +142,7 @@ body {
     top: 3rem;
     z-index: 15;
     background-color: rgba(248, 239, 239, 0.5);
+    width: 100%;
     height: 7rem;
   }
   .header__menu-item {
@@ -181,8 +218,8 @@ body {
 }
 
 .description {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -216,7 +253,6 @@ body {
 }
 .description__photo {
   margin-top: 2rem;
-  text-align: center;
 }
 .description__photo img {
   width: 10rem;
@@ -265,9 +301,10 @@ body {
   color: rgb(90, 78, 78);
   line-height: 1.5;
   font-family: cursive;
-  padding: 4rem 2rem 2rem;
   color: rgb(90, 78, 78);
+  padding: 4rem 2rem 2rem;
   float: right;
+  margin-top: 2rem;
 }
 @media (min-width: 1024px) {
   .description__text {
@@ -277,8 +314,8 @@ body {
 }
 
 .footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   display: flex;
@@ -324,11 +361,24 @@ body {
   }
 }
 .footer__title {
+  font-family: Arial, sans-serif;
+  text-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+  line-height: 1.5;
+  color: rgb(90, 78, 78);
   font-size: 2rem;
+  text-align: start;
   margin-bottom: 1rem;
 }
-.footer__text {
-  margin-bottom: 2rem;
+@media (min-width: 767px) {
+  .footer__title {
+    font-size: 2.6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__title {
+    font-size: 3.5rem;
+  }
 }
 .footer__location {
   margin-bottom: 2rem;
@@ -338,7 +388,16 @@ body {
   justify-content: none;
   align-items: center;
   flex-direction: row;
+  font-size: 1.4rem;
+  color: rgb(90, 78, 78);
+  line-height: 1.5;
   margin-bottom: 2rem;
+}
+@media (min-width: 1024px) {
+  .footer__location-text {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
 }
 .footer__location img {
   width: 2rem;
@@ -469,8 +528,8 @@ body {
 }
 
 .gallery {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -495,6 +554,183 @@ body {
 .gallery .swiper-scrollbar {
   margin-bottom: 0.5rem;
   background-color: rgb(236, 218, 218);
+}
+
+.submit {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .submit {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.submit__contact-form {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+@media (min-width: 1024px) {
+  .submit__contact-form {
+    flex-basis: 50rem;
+  }
+}
+.submit__title {
+  font-size: 1.6rem;
+  color: rgb(90, 78, 78);
+  line-height: 1.5;
+  font-family: cursive;
+  text-align: center;
+  padding-top: 2rem;
+  font-weight: bold;
+}
+@media (min-width: 1024px) {
+  .submit__title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+.submit__input {
+  margin-bottom: 2.1rem;
+  width: 80%;
+}
+.submit__service {
+  display: flex;
+  justify-content: flex-start;
+  align-items: none;
+  flex-direction: column;
+  width: 80%;
+}
+.submit__select {
+  margin-bottom: 2.1rem;
+}
+.submit__label {
+  font-size: 1.6rem;
+  color: rgb(90, 78, 78);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+@media (min-width: 1024px) {
+  .submit__label {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .submit__label {
+    margin-bottom: 0;
+  }
+}
+.submit__button {
+  width: 20rem;
+  align-self: center;
+  margin-bottom: 2rem;
+}
+
+.price {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .price {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.price__wrapper {
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: row;
+  padding: 4rem;
+}
+.price__title {
+  font-size: 1.6rem;
+  color: rgb(90, 78, 78);
+  line-height: 1.5;
+  font-family: cursive;
+  color: rgb(90, 78, 78);
+  font-weight: bold;
+}
+@media (min-width: 1024px) {
+  .price__title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+.price__content {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  background-color: rgb(207, 183, 183);
+  padding: 4rem;
+  font-size: 1.6rem;
+  color: rgb(90, 78, 78);
+  line-height: 1.5;
+  font-family: cursive;
+  color: rgb(90, 78, 78);
+}
+@media (min-width: 1024px) {
+  .price__content {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+.price__card {
+  width: 35%;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: column;
+  background-color: rgb(207, 183, 183);
+  padding: 4rem;
+}
+.price__card-title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: rgb(90, 78, 78);
+  line-height: 1.5;
+  font-family: cursive;
+  color: rgb(90, 78, 78);
+  font-weight: bold;
+}
+@media (min-width: 1024px) {
+  .price__card-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+.price__card-content {
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: column;
+  font-size: 1.6rem;
+  color: rgb(90, 78, 78);
+  line-height: 1.5;
+  font-family: cursive;
+  color: rgb(90, 78, 78);
+}
+@media (min-width: 1024px) {
+  .price__card-content {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+.price__card-content li {
+  margin-bottom: 2rem;
 }
 
 * {
