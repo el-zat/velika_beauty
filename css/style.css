@@ -240,14 +240,14 @@ body {
     height: 14rem;
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-top: 5rem;
+    margin-top: 13rem;
   }
 }
 @media (min-width: 767px) and (min-width: 1024px) {
   .description__photo img {
     width: 20rem;
     height: 27rem;
-    margin-top: 20rem;
+    margin-top: 22rem;
   }
 }
 @media (min-width: 767px) {
