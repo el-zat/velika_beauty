@@ -1,6 +1,24 @@
 .gallery {
     @include section();
 
+    &__wrapper {
+        border: 2px solid $bgColor;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        @include h1();
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        text-align: center;
+        color: $mainFontColor;
+
+        @media ($_desktop) {
+            font-size: 4rem;
+        }
+    }
+
     .swiper-slide {
         img {
             width: 29rem;

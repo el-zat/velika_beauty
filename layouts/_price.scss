@@ -2,52 +2,84 @@
     @include section();
 
     &__wrapper {
-        @include flex(none, none, row);
-        padding: 4rem;
+        @include flex(none, center, column);
+        padding: 2rem;
+        background-image: url('../img/background-beige.jpg');
+        background-size: cover;
+        border: 2px solid $bgColor;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     &__title {
-        @include p1();
-        font-family:cursive;       
-        color: $mainFontColor;
-        font-weight: bold;
+        display: none;
+
+        @media ($_tablet) {
+            display: block;
+            font-size: 3.5rem;
+            @include p1();      
+            color: $mainFontColor;
+            font-weight: bold;
+            
+        }
+
+        &-mob {
+            @include p1();
+            font-size: 2rem;      
+            color: $mainFontColor;
+            font-weight: bold;
+            text-align: center;
+
+            @media ($_tablet) {
+                display: none;
+            }
+        }
     }
 
-    &__content {
-        @include flex(none, center, column);
-        width: 30%;
-        background-color: $beige;
-        padding: 4rem;
-        @include p1();
-        font-family:cursive;       
-        color: $mainFontColor;
-    }
 
+    &__cards {
+        width: 95%;
+        @include flex(space-between, center, column);
+
+        @media ($_desktop) {
+            @include flex(space-between, none, row);       
+        }       
+    }
 
     &__card {
-        width: 35%;
-        margin-left: 4rem;
         margin-bottom: 2rem;
-        @include flex(none, none, column);
+        @include flex(none, center, column);
         background-color: $beige;
-        padding: 4rem;
+        width: 100%;
+        
+        @media ($_tablet) {
+            width: 70%;
+            border: 2px solid $mainFontColor;
+        }
+        @media ($_desktop) {
+            width: 49%;
+        }
 
         &-title {
             text-align: center;
             @include p1();
-            font-family:cursive;       
+            font-size: 1.8rem;
+            margin-top: 1.5rem;      
             color: $mainFontColor;
             font-weight: bold;
         }
 
         &-content {
             @include flex(none, none, column);
-            @include p1();
-            font-family:cursive;       
+            @include p1();     
             color: $mainFontColor;
+            
+            ul {
+                padding-left: 2rem;
+            }
 
             & li {
-                margin-bottom: 2rem;;
+                margin-bottom: 2rem;
             }
         }
 

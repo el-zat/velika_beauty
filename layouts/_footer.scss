@@ -1,15 +1,19 @@
 .footer {
     @include section();
+    padding-bottom: 0;
     @include flex(none, none, column);
     
 
     &__wrapper {
-        @include flex(space-between, none, column);
+        background-image: url('../img/background-beige.jpg');
+        background-size: cover;
+        border: 2px solid $bgColor;
+        @include flex(space-between, center, column);
 
         @media ($_tablet) {
             @include flex(space-between, none, row);
         }
-        padding: 3rem 5% 1rem;
+        padding: 3rem 3rem 1rem;
     }
 
     &__content {
@@ -22,7 +26,6 @@
         @include h1();
         text-align: start;
         margin-bottom: 1rem;
-        
     }
 
     &__location {
@@ -37,6 +40,7 @@
         img {
             width: 2rem;
             height: 2rem;
+            margin-right: 1rem;
 
             @media ($_tablet) {
                 width: 3rem;
@@ -45,30 +49,47 @@
         }
     }
 
-    &__contacts{
+    &__contacts {
         @include flex(none, none, column);
-        margin-top: 5%;
-        margin-left: 10%;
-        @media ($_tablet)  {
-            margin-left: 4rem;
-        }
         @include p2();
 
-        &-item {
-            margin-bottom: 2rem
+        @media ($_tablet)  {
+            margin-left: 1rem;
+            margin-top: 2rem;
         }
-    }
+
+        &-item {
+            margin-bottom: 2rem;
+            text-decoration: none;
+            margin-bottom: 3rem;
+            display: flex;         
+            align-items: center;
+    
+            img {
+                width: 2rem;
+                height: 2rem;
+                margin-right: 1rem;
+                display: block;
+                color: $black;
+    
+                @media ($_desktop) {
+                    width: 3rem;
+                    height: 3rem;
+                }               
+            }
+        }
+
+    }    
 
     &__legality {
         @include flex(none, none, column);
         @include p2();
-        margin-top: 2rem;
-
+ 
         @media ($_tablet)  {
-            margin-top: 10rem;
+            margin-top: -3rem;
         }
         @media ($_desktop)  {
-            margin-top: 10rem;
+            margin-top: -4rem;
         }
          &-menu-item {
             margin-bottom: 3rem;
@@ -76,26 +97,6 @@
     }
 
 
-    &__contacts-item {
-        text-decoration: none;
-        margin-bottom: 3rem;
-        display: flex;
-        align-items: center;
-
-        img {
-            width: 2rem;
-            height: 2rem;
-
-            @media ($_tablet) {
-                width: 3rem;
-                height: 3rem;
-            }
-            margin-right: 1rem;
-            display: block;
-            color: $black;
-        }
-    }
-    
     &__links {
         display: flex;
         flex-direction: column;
@@ -112,6 +113,12 @@
         background-color: $beige;
         padding: 2rem 0 2rem;
         @include p2();
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 0;
+
+        @media ($_desktop) {
+            margin-bottom: 0;
+        }
 
         &-text {
             font-size: 1rem;

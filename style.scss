@@ -1,11 +1,9 @@
 @import './vars';
 @import './mixins';
-// @import './fonts/fonts';
 @import './layouts/header';
 @import './layouts/description';
 @import './layouts/footer';
 @import './layouts/slider';
-@import './layouts/submit';
 @import './layouts/price';
 
 * {
@@ -20,16 +18,13 @@ html {
 body {
     @extend %mainFont;  
     background-color: $beige;
-    // background-color: $bgColor;
 }
-
 
 .container {
     width: 100%;
-    max-width: 144rem;
+    max-width: 102rem;
     margin: 0 auto;
     background-color: $bgColor;
-    // height: 500rem;
 }
 
 a,
@@ -37,8 +32,5 @@ a:visited {
     color:$mainFontColor;
     text-decoration: none;
 }
-
-
-
 
 

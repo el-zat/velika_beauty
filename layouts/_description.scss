@@ -1,69 +1,101 @@
 .description {
-    @include section();
-
-    &__wrapper {
-        @include flex (none, none, column);
-
-        @media ($_tablet) {
-            @include flex (none, none, row);
-        }
-
-        @media ($_desktop) {
-            @include flex (space-around, center, row);
-        }
+    @media ($_mobile) {
+        display: none;
     }
+    
+    @media ($_tablet) {
+        display: block;
+        @include section();
 
-    &__photo {
-        margin-top: 2rem;        
+        &__wrapper {
+            background-image: url('../img/background-beige.jpg');
+            background-size: cover;
+            border: 2px solid $bgColor;
+            @include flex (none, none, column);
 
-        img {
-            width: 10rem;       
-            box-shadow:  12px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            @media ($_tablet) {
+                @include flex (none, none, row);
+            }
+
+            @media ($_desktop) {
+                @include flex (none, none, row);
+            }
+        }
+
+        &__photo { 
+            float: left;
+
+            img {
+                width: 10rem;       
+                box-shadow:  12px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border-radius: 2rem;
+
+                @media ($_tablet) {
+                    width: 10rem;
+                    height: 14rem;
+                    margin-left: 2rem;
+                    margin-right: 2rem;
+                    margin-top: 5rem;
+                }
+            
+                @media ($_desktop) {
+                    width: 20rem;
+                    height: 27rem;
+                    margin-top: 12rem;
+                }
+            }
+        }
+
+        &__image {
             margin-left: auto;
             margin-right: auto;
+
+            img {
+                border: 4px solid $bgColor;           
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            &-large {
+                border: 4px solid $bgColor;         
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                margin-left: 1rem;
+                margin-top: 1.5rem;
+
+                @media ($_tablet) {
+                    width: 15rem;
+                    margin-bottom: 0; 
+                }
             
-            @media ($_tablet) {
-                width: 16rem;
-                height: 28rem;
+                @media ($_desktop) {
+                    width: 30rem;
+                    height: 30rem;
+                }
             }
-        
-            @media ($_desktop) {
-                width: 20rem;
-                height: 35rem;
+            &-small {
+                border: 4px solid $bgColor;           
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                margin-top: -5rem;
                 margin-left: 2rem;
-                margin-right: 3rem;
-            }
-        }
-    }
-
-    &__image {
-        margin-left: auto;
-        margin-right: auto;
-
-        img {
-            border: 4px solid $bgColor;
-            width: 15rem; 
-            margin-bottom: 1rem;           
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-            @media ($_tablet) {
-                width: 15rem;
-                margin-bottom: 0; 
-            }
+                rotate: -10deg;
         
-            @media ($_desktop) {
-                width: 40rem;
-                height: 70rem;
+                @media ($_tablet) {
+                    width: 15rem;
+                    margin-bottom: 0; 
+                }
+            
+                @media ($_desktop) {
+                    width: 25rem;
+                    height: 25rem;
+                }
             }
         }
-    }
 
-    &__text {
-        @include p1();
-        font-family:cursive;       
-        color: $mainFontColor;
-        padding: 4rem 2rem 2rem;
-        float: right;
-        margin-top: 2rem;
-    }
+        &__text {
+            @include p2();;       
+            color: $mainFontColor;
+            padding-left: 3rem;   
+            margin-top: 3rem;
+            text-align: center;
+            }
+        }
 }

@@ -5,7 +5,7 @@
     font-size: $_size;
     line-height: $_height;
     font-weight: $_weight;
-    font-family: "Montserrat", sans-serif;
+    font-family: cursive;
     color: #ffff;
 }
 
@@ -17,7 +17,8 @@
     flex-direction: $_fd;
 }
 
-@mixin section($pt: 3rem, $pb: 3rem) {
+@mixin section($pt: 1rem, $pb: 1rem) {
+    // width: 100%;
     padding-top: $pt;
     padding-bottom: $pb;
     padding-left: 1.5rem;
@@ -31,7 +32,7 @@
 }
 
 @mixin h() {
-    font-family: Arial, sans-serif;
+    font-family: cursive;
     text-shadow: $mainShadow;
     text-align: center;
     line-height: 1.5;
@@ -57,6 +58,9 @@
     @media ($_tablet) {
         font-size: 1.6rem;
     }
+    @media ($_desktop) {
+        font-size: 1.8rem;
+    }
 }
 
 
@@ -64,7 +68,13 @@
     font-size: 1.6rem;
     color: $color;
     line-height: 1.5;
+    margin-bottom: 2rem;
+    font-family: cursive;
 
+    @media ($_tablet) {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
     @media ($_desktop) {
         font-size: 2.5rem;
         margin-bottom: 3rem;
@@ -75,9 +85,10 @@
     font-size: 1.4rem;
     color: $color;
     line-height: 1.5;
+    font-family: cursive;
 
     @media ($_desktop) {
-        font-size: 1.8rem;
+        font-size: 2rem;
         margin-bottom: 3rem;
     }
 }
@@ -92,8 +103,7 @@
     border: 2px solid $mainFontColor;
     height: 7rem;
     margin-bottom: 5rem;
-    font-family: cursive;
-    
+    font-family: cursive;    
 }
 
 %textarea {
