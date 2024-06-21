@@ -48,14 +48,16 @@
             }
         }
 
+       
+
         &-title {
             text-align: center;
             font-size: 1.4rem;            
             color: $mainFontColor;
             font-weight: bold;
             font-family: LittleKitchen;
-            margin-bottom: 0.5rem;
-            margin-top: 1rem;
+            margin-bottom: 0rem;
+            margin-top: 1.5rem;
 
 
             @media ($_desktop) {

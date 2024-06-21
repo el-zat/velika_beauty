@@ -86,8 +86,8 @@ body {
   color: rgb(90, 78, 78);
   font-weight: bold;
   font-family: LittleKitchen;
-  margin-bottom: 0.5rem;
-  margin-top: 1rem;
+  margin-bottom: 0rem;
+  margin-top: 1.5rem;
 }
 @media (min-width: 1024px) {
   .header__logo-title {
