@@ -33,6 +33,7 @@
         margin-left: 3rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
+  
 
         @media ($_desktop) {
             margin: 1rem 3rem;
@@ -115,11 +116,13 @@
             @include flex (space-between, center, row);
             margin-left: 5rem;
             margin-top: 2rem;
+            
                    
     
             &-item {
                 margin-bottom: 2rem;
-                @include p2();
+                // @include p2();
+                font-size: 2rem;
                 margin-right: 4rem;
                 font-weight: bold;
                 
