@@ -30,10 +30,12 @@
 
     &__location {
         margin-bottom: 2rem;
+        
 
         &-text {
             @include flex(none, center, row);
             @include p2();
+            
             margin-bottom: 2rem;
         }
 
@@ -56,6 +58,7 @@
         @media ($_tablet)  {
             margin-left: 1rem;
             margin-top: 2rem;
+            font-size: 2rem;
         }
 
         &-item {
@@ -87,6 +90,7 @@
  
         @media ($_tablet)  {
             margin-top: -3rem;
+            font-size: 2rem;
         }
         @media ($_desktop)  {
             margin-top: -4rem;
@@ -121,7 +125,7 @@
         }
 
         &-text {
-            font-size: 1rem;
+            font-size: 1.4rem;
             letter-spacing: 0.3px;
             text-align: center;
             line-height: 2;

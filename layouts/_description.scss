@@ -27,8 +27,8 @@
 
             img {
                 width: 10rem;       
-                box-shadow:  12px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                border-radius: 2rem;
+                border: 4px solid $bgColor;           
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
                 @media ($_tablet) {
                     width: 10rem;
@@ -74,13 +74,12 @@
             &-small {
                 border: 4px solid $bgColor;           
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                margin-top: -5rem;
-                margin-left: 2rem;
+                margin-top: -2rem;
+                margin-left: 1rem;
                 rotate: -10deg;
         
                 @media ($_tablet) {
                     width: 15rem;
-                    margin-bottom: 0; 
                 }
             
                 @media ($_desktop) {
@@ -91,11 +90,16 @@
         }
 
         &__text {
-            @include p2();;       
-            color: $mainFontColor;
-            padding-left: 3rem;   
-            margin-top: 3rem;
+            @include p2();
+            // font-size: 1.6rem;     
+            padding-left: 2rem;   
+            padding-bottom: 1rem;
+            margin-top: 1rem;
             text-align: center;
             }
+
+            // @media ($_desktop) {
+            //     font-size: 3rem;
+            // }
         }
 }

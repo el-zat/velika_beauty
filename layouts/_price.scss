@@ -25,7 +25,7 @@
 
         &-mob {
             @include p1();
-            font-size: 2rem;      
+            font-size: 2.5rem;      
             color: $mainFontColor;
             font-weight: bold;
             text-align: center;
@@ -63,7 +63,7 @@
         &-title {
             text-align: center;
             @include p1();
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-top: 1.5rem;      
             color: $mainFontColor;
             font-weight: bold;
@@ -71,15 +71,17 @@
 
         &-content {
             @include flex(none, none, column);
-            @include p1();     
+            @include p1();  
+            font-size: 1.8rem;   
             color: $mainFontColor;
             
             ul {
-                padding-left: 2rem;
+                padding-left: 0;
             }
 
             & li {
                 margin-bottom: 2rem;
+                list-style: none;
             }
         }
 

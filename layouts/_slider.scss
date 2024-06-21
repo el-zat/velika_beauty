@@ -1,6 +1,14 @@
 .gallery {
     @include section();
 
+    .container {
+        margin-top: 14rem;
+
+        @media ($_desktop) {
+            margin-top: 19rem;
+        }
+    }
+
     &__wrapper {
         border: 2px solid $bgColor;    
     }
