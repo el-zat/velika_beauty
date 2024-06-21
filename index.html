@@ -16,7 +16,7 @@
 <body>
 
     <header>   
-        <section class="header" id="header">               
+        <section class="header sticky">               
             <div class="container header__wrapper"> 
                 <div class="header__logo">
                     <div class="header__logo-title">Velika Beauty</div>
@@ -212,6 +212,32 @@
         </section>   
     </footer>
     
+    <!-- <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+    </script> -->
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("hamburger");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+    }
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.gallery__swiper', {
@@ -247,31 +273,8 @@
 
     </script>
 
-    <script>
-        window.onscroll = function() {myFunction()};
-        
-        var header = document.getElementById("header");
-        var sticky = header.offsetTop;
-        
-        function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
-        }
-    </script>
 
-<script>
-    function myFunction() {
-        var x = document.getElementById("hamburger");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
-}
-</script>
+    
 
 </body>
 
