@@ -25,10 +25,10 @@
 
 
     &__logo {
-        @font-face {
-            font-family: 'LittleKitchen';
-            src:  url('../LittleKitchen.ttf') format('truetype');
-         }
+        // @font-face {
+        //     font-family: 'LittleKitchen';
+        //     src:  url('../LittleKitchen.ttf') format('truetype');
+        //  }
 
         @include flex (space-between, center, column);
         margin-left: 3rem;
@@ -57,7 +57,7 @@
             font-size: 1.4rem;            
             color: $mainFontColor;
             font-weight: bold;
-            font-family: LittleKitchen;
+            font-family: cursive;
             margin-bottom: 0rem;
             margin-top: 1.5rem;
 

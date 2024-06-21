@@ -61,10 +61,6 @@ body {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-@font-face {
-  font-family: "LittleKitchen";
-  src: url("../LittleKitchen.ttf") format("truetype");
-}
 @media (min-width: 1024px) {
   .header__logo {
     margin: 1rem 3rem;
@@ -85,7 +81,7 @@ body {
   font-size: 1.4rem;
   color: rgb(90, 78, 78);
   font-weight: bold;
-  font-family: LittleKitchen;
+  font-family: cursive;
   margin-bottom: 0rem;
   margin-top: 1.5rem;
 }
