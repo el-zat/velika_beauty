@@ -55,13 +55,13 @@
             font-weight: bold;
             font-family: LittleKitchen;
             margin-bottom: 0.5rem;
-            margin-top: 0.5rem;
+            margin-top: 1rem;
 
 
             @media ($_desktop) {
                 font-size: 1.8rem;
-                margin-bottom: 1rem;
-                margin-top: 1rem;
+                // margin-bottom: 1rem;
+                // margin-top: 1rem;
             }     
         }
     }
